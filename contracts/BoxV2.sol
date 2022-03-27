@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-contract Box {
+contract BoxV2 {
     uint256 public value;
 
     event ValueChanged(uint256 newValue);
@@ -21,3 +21,8 @@ contract Box {
         emit ValueChanged(value);
     }
 }
+/**
+    Dentro de Proxy Admin tenes una funcion llamada upgrade para cambiar la implementacion
+    Y otra llamada upgradeAndCall. Cambia la implementacion del proxy y ademas llama a una funcion 'initializer'
+    Es como un constructor, podria ser cualquier funcion. Por que? i dunno, investigate 
+*/
